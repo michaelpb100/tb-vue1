@@ -24,6 +24,8 @@ export default class Header extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
+
+
 .mapButton{
 	height: 20px;
 	width: 20px;
@@ -44,7 +46,12 @@ export default class Header extends Vue {
 }
 .contactIcon{
 	margin-left: 5px;
+        text-decoration: none;
+    color: #fff;
+    outline: none;
 }
+
+
 
 .contactBar{
 	/* background-color: #2C2C2C; */
