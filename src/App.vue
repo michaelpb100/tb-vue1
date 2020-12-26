@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-
+    <button class="fa fa-bars fa-home action action--open" aria-label="Open Menu"></button>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
@@ -28,6 +28,57 @@ export default class App extends Vue {}
 
 <style lang="scss">
 
+.icon {
+	font-family: 'feather';
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-transform: none;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	speak: none;
+}
+
+.icon--arrow-left:before {
+	content: '\e901';
+}
+
+.icon--menu:before {
+	content: '\e903';
+}
+
+.icon--cross:before {
+	content: '\e117';
+}
+
+
+
+/* Open and close buttons */
+
+.action {
+	position: absolute;
+  display: block;
+	margin: 0;
+	padding: 50;
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+.action:focus {
+	outline: none;
+}
+
+
+.action--close {
+	font-size: 1.1em;
+	top: 1.25em;
+	right: 1em;
+	display: none;
+	color: #45464e;
+}
 
 #app {
   overflow-y: auto;
