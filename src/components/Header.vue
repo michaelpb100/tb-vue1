@@ -58,11 +58,13 @@ export default class Header extends Vue {
 	/* background-color: #3b3d4a; */
 	background-color: #3b3d4a;
 	width: 100%;
+	// height: 30px;
 	z-index: 30;
 	text-align: center;
 	color: blanchedalmond;
 	padding-top: 5px;
 	padding-bottom: 5px;
+
 	/* display: inline; */
 }
 

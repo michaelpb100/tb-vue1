@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <Header/>
-    <button class="fa fa-bars fa-home action action--open" aria-label="Open Menu"></button>
-    <div id="nav">
+    <button class="fa fa-bars action action--open" aria-label="Open Menu"></button>
+    <Menu v-bind:mobileMode="true"/>
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/services">Services</router-link>
-    </div>
+    </div> -->
     <router-view />
   </div>
 </template>
@@ -14,11 +15,13 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Header from "@/components/Header.vue"; // @ is an alias to /src
+import Header from "@/components/Header.vue";
+import Header1 from "@/components/Header1.vue";
+import Menu from "@/components/Menu.vue";
 
 @Component({
   components: {
-    Header
+    Header, Menu
   }
 })
 export default class App extends Vue {}
