@@ -3,7 +3,6 @@
     <Header/>
     <!-- <button class="fa fa-bars action action--open" aria-label="Open Menu"></button> -->
     <ResponsiveNavigation
-		:nav-links="navLinks"
 		:image-path="require('./assets/logo.png')"
 		background="#fff"
 		link-color="#777"
