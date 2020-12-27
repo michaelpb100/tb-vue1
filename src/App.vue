@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <button class="fa fa-bars action action--open" aria-label="Open Menu"></button>
+    <!-- <button class="fa fa-bars action action--open" aria-label="Open Menu"></button> -->
     <ResponsiveNavigation
 		:nav-links="navLinks"
 		:image-path="require('./assets/logo.png')"

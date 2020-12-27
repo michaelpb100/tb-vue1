@@ -38,12 +38,16 @@ export default {
 
 nav {
     position: fixed;
-    top: 10px;
+    // top: 35px;
+	// margin-top: 35px;
+	// top: 10px;
+	border: none;
+	box-shadow: none;
     left: 0;
     width: 300px;
     height: calc(100vh - 120px);
     background: #ffffff;
-	box-shadow: 2px 2px 2px #CCC;
+	// z-index: -1;
 	ul {
 		display: flex;
 		height: 100%;
@@ -52,10 +56,10 @@ nav {
 		margin-block-start: 0;
 		margin-block-end: 0;
 		padding-inline-start: 0;
-		box-shadow: 2px 2px 2px #CCC;
 
 		figure {
 			cursor: pointer;
+			margin-top: 35px;
 			margin-right: 10px;
 		}
 
@@ -81,9 +85,11 @@ nav {
 @media screen and (max-width: 759px) {
 	nav {
 		position: block;
-		top: 10px;
+		margin-top: 10px;
+		top: 35px;
 		left: 0;
 		width: 0px;
+		height: calc(100vh - 120px);
 
 		ul {
 			position: absolute;
