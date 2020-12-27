@@ -15,7 +15,7 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/services">Services</router-link>
     </div> -->
-    <router-view />
+    <router-view class="outlet" />
   </div>
 </template>
 
@@ -64,6 +64,17 @@ export default class App extends Vue {}
 <style lang="scss">
 @import 'https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css';
 
+
+.outlet{
+  position: relative;
+  margin-left: 300px;
+}
+
+@media screen and (max-width: 759px) {
+	.outlet {
+      margin-left: 100px;
+  }
+}
 
 .icon {
 	font-family: 'feather';
