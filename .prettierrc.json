@@ -1,0 +1,26 @@
+{
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": false,
+  "vueIndentScriptAndStyle": true,
+  "printWidth": 150,
+  "overrides": [
+    {
+      "files": "**/sasCodeGenerator/*.ts",
+      "options": {
+        "tabWidth": 2,
+        "printWidth": 1000
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "options": {
+        "tabWidth": 2,
+        "printWidth": 150
+      }
+    }
+  ]
+}

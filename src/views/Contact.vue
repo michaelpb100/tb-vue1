@@ -1,12 +1,12 @@
 <template>
-<div>Services</div>
+<div>Contact</div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class Services extends Vue {
+export default class Contact extends Vue {
 //   @Prop() private msg!: string;
 }
 </script>

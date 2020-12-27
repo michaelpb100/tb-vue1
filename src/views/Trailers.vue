@@ -1,12 +1,12 @@
 <template>
-<div>Services</div>
+<div>Trailers</div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class Services extends Vue {
+export default class Trailers extends Vue {
 //   @Prop() private msg!: string;
 }
 </script>

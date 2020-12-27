@@ -60,22 +60,17 @@ export default {
         text: 'Contact',
 		path: '/contact',
 		icon: 'ion-ios-bonfire'
-      },
-      {
-        text: 'Portfolio',
-		path: '/portfolio',
-		icon: 'ion-ios-briefcase'
       }
 	],
 	workLinks: [
       {
         text: 'Trailers',
-		path: '/',
+		path: '/trailers',
 		icon: 'ion-ios-megaphone'
       },
       {
         text: 'Railings and Gates',
-		path: '/services',
+		path: '/gates',
 		icon: 'ion-ios-business'
       },
     ]
