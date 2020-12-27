@@ -63,6 +63,9 @@ nav {
 			margin-top: 35px;
 			margin-right: 10px;
 			display: none;
+			border: none;
+			background: none;
+			 outline:none;
 		}
 
 		a {
