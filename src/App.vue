@@ -56,12 +56,14 @@
 
   .outlet {
     position: relative;
-    margin-left: 200px;
+    margin-left: 300px;
+    background: #42b983;
   }
 
   @media screen and (max-width: 759px) {
     .outlet {
-      margin-left: 50px;
+      margin-left: 70px;
+      background: #42b983;
     }
   }
 
