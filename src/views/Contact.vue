@@ -4,10 +4,12 @@
       <h1 class="h1">Contact Information</h1>
 
       <p><strong>Our Opening Hours:</strong></p>
-      <ul>
+      <!-- <ul>
         <li><strong>Monday to Thursday: </strong>8.00 AM to 5.30 PM</li>
         <li><strong>Friday: </strong>8.00 AM to 4.30 PM</li>
-      </ul>
+      </ul> -->
+      <div><strong>Monday to Thursday: </strong>8.00 AM to 5.30 PM</div>
+      <div><strong>Friday: </strong>8.00 AM to 4.30 PM</div>
       <div class="divider"></div>
       <p><strong>Contact:</strong></p>
       <div>

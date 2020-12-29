@@ -9,7 +9,12 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/services">Services</router-link>
     </div> -->
-    <router-view class="outlet" />
+    <div class="outlet">
+      <div class="header-image">
+        <img alt="Tom Brooks Engineering" height="120" width="240" src="./assets/tom-brooks-logo-wide.jpg" />
+      </div>
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -60,10 +65,21 @@
     // background: #42b983;
   }
 
+  .header-image {
+    display: flex;
+    width: 300px;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 150px;
+  }
+
   @media screen and (max-width: 759px) {
     .outlet {
       margin-left: 70px;
       // background: #42b983;
+    }
+    .header-image {
+      display: none;
     }
   }
 
