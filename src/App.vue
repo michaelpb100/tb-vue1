@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <!-- <button class="fa fa-bars action action--open" aria-label="Open Menu"></button> -->
-    <ResponsiveNavigation :image-path="'./images/logo.png'" background="#fff" link-color="#777" hoverBackground="#ddd" />
+    <ResponsiveNavigation background="#fff" link-color="#777" hoverBackground="#ddd" />
     <!-- <Menu v-bind:mobileMode="true"/> -->
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |

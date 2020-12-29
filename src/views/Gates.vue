@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <img :src="require(`${image}`)" class="image" alt="..." />
+    <!-- <img :src="image" class="image" alt="..." /> -->
+    <!-- <img :src="process.env.BASE_URL + 'favicon.ico'" class="image" alt="..." /> -->
     <img class="image" v-for="(image, i) in images" :src="image" :key="i" @click="index = i" />
-    <!-- <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow> -->
+    <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
   </div>
   <!-- <div class="bd-example carousel-resizable">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -72,39 +73,21 @@
   export default class Gates extends Vue {
     private images: Array<string>;
     private index = 0;
-    // private image = "@/assets/HomeBackDoor.jpg";
+    // private image;
     // private image = "https://picsum.photos/id/1005/600/200";
 
     beforeCreate() {
-      console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
+      const basePath = process.env.BASE_URL;
       this.images = [
-        "@/assets/HomeBackDoor.jpg"
-        // "https://placekitten.com/801/800",
-        // "https://placekitten.com/802/800",
-        // "https://placekitten.com/803/800",
-        // "https://placekitten.com/804/800",
-        // "https://placekitten.com/805/800",
-        // "https://placekitten.com/806/800",
-        // "https://placekitten.com/807/800",
-        // "https://placekitten.com/808/800",
-        // "https://placekitten.com/809/800",
-        // "https://placekitten.com/810/800"
+         basePath  +"images/HomeBackDoor.jpg",
+         basePath  +"images/schoolRail.jpg",
+         basePath  +"images/door.jpg",
+         basePath  +"images/HomeFrontDoor.jpg",
+         basePath  +"images/Shannon_Airport2.png"
       ];
       console.log(this.images[0]);
       this.index = 0;
     }
-    // images: [
-    //   "https://placekitten.com/801/800",
-    //   "https://placekitten.com/802/800",
-    //   "https://placekitten.com/803/800",
-    //   "https://placekitten.com/804/800",
-    //   "https://placekitten.com/805/800",
-    //   "https://placekitten.com/806/800",
-    //   "https://placekitten.com/807/800",
-    //   "https://placekitten.com/808/800",
-    //   "https://placekitten.com/809/800",
-    //   "https://placekitten.com/810/800"
-    // ];
   }
 </script>
 
