@@ -14,24 +14,21 @@ const routes: Array<RouteConfig> = [
     path: "/services",
     name: "Services",
     component: () => import("../views/Services.vue")
-  }, 
+  },
   {
     path: "/contact",
     name: "Contact",
-    component: () =>
-      import("../views/Contact.vue")
-  }, 
+    component: () => import("../views/Contact.vue")
+  },
   {
     path: "/trailers",
     name: "Trailers",
-    component: () =>
-      import("../views/Trailers.vue")
-  }, 
+    component: () => import("../views/Trailers.vue")
+  },
   {
     path: "/gates",
     name: "Gates",
-    component: () =>
-      import("../views/Gates.vue")
+    component: () => import("../views/Gates.vue")
   }
 ];
 

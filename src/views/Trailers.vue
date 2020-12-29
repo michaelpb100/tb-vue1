@@ -1,17 +1,13 @@
 <template>
-<div>Trailers</div>
+  <div>Trailers</div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+  import { Component, Vue } from "vue-property-decorator";
 
-@Component
-export default class Trailers extends Vue {
-//   @Prop() private msg!: string;
-}
+  @Component
+  export default class Trailers extends Vue {}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
