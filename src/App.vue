@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <!-- <button class="fa fa-bars action action--open" aria-label="Open Menu"></button> -->
-    <ResponsiveNavigation :image-path="require('./assets/logo.png')" background="#fff" link-color="#777" hoverBackground="#ddd" />
+    <ResponsiveNavigation :image-path="'./images/logo.png'" background="#fff" link-color="#777" hoverBackground="#ddd" />
     <!-- <Menu v-bind:mobileMode="true"/> -->
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -11,7 +11,7 @@
     </div> -->
     <div class="outlet">
       <div class="header-image">
-        <img alt="Tom Brooks Engineering" height="120" width="240" src="./assets/tom-brooks-logo-wide.jpg" />
+        <img alt="Tom Brooks Engineering" height="120" width="240" src="../public/images/tom-brooks-logo-wide.jpg" />
       </div>
       <router-view />
     </div>

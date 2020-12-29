@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="imageContainer">
-      <img class="rounded" src="../assets/Drill.jpg" width="100%" />
+      <img class="rounded" src="../../public/images/Drill.jpg" width="100%" />
     </div>
     <div class="indentedContent">
       <h1 class="h1">What we do</h1>

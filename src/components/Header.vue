@@ -5,8 +5,12 @@
       <i class="fa fa-envelope" aria-hidden="true"></i
       ><a class="contactIcon" href="mailto:tombrooksengineering@gmail.com">tombrooksengineering@gmail.com</a>
     </div>
-    <button onclick="window.location.href = 'https://maps.app.goo.gl/YeKn7usWHGaX4GuF6';" class="mapButton">
-      <img class="mapImage" height="20px" width="20px" src="../assets/map2.png" />
+    <button
+      onclick="window.location.href = 'https://maps.app.goo.gl/
+    YeKn7usWHGaX4GuF6';"
+      class="mapButton"
+    >
+      <img class="mapImage" height="20px" width="20px" src="../../public/images/map2.png" />
     </button>
   </div>
 </template>
