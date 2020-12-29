@@ -43,19 +43,9 @@
         return this.images.filter(image => image.filter === this.galleryFilter);
       }
     }
-    
+
 
     beforeCreate() {
-      // const basePath = process.env.BASE_URL + "images/";
-      // console.log("basePath")
-      // console.log(basePath)
-      // this.images = [
-      //    basePath  +"images/HomeBackDoor.jpg",
-      //    basePath  +"images/schoolRail.jpg",
-      //    basePath  +"images/door.jpg",
-      //    basePath  +"images/HomeFrontDoor.jpg",
-      //    basePath  +"images/Shannon_Airport2.png"
-      // ];
       this.thumbnailDir = process.env.BASE_URL + "images/";
       this.images = [{'name':'HomeBackDoor.jpg', 'alt':'The Dolomites', 'filter':'nature', 'id':'image1' },
                {'name':'schoolRail.jpg', 'alt':'It is a bird on a tree!', 'filter':'animals', 'id':'image2' }, 
