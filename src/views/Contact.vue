@@ -14,15 +14,14 @@
         <div class="bulletLess"><i class="fa fa-phone" aria-hidden="true"></i><a class="contactIcon" href="tel:+353879554650">087 955 4650</a></div>
         <div class="bulletLess">
           <i class="fa fa-envelope" aria-hidden="true"></i><a id="email" class="contactIcon" :href="'mailto:' + mailAddress">{{ mailAddress }}</a>
-          <input
+          <!-- <input
             type="image"
             class="clickable"
-            src="../assets/copyIcon.png"
             title="Click to Copy Email"
             @click="copyMailToClipboard"
             width="24"
             height="24"
-          />
+          /> -->
         </div>
       </div>
       <div style="margin-top: 20px;" class="divider"></div>
