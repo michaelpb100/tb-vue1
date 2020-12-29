@@ -13,14 +13,13 @@
       <div>
         <div class="bulletLess"><i class="fa fa-phone" aria-hidden="true"></i><a class="contactIcon" href="tel:+353879554650">087 955 4650</a></div>
         <div class="bulletLess">
-          <i class="fa fa-envelope" aria-hidden="true"></i
-          ><a id="email" class="contactIcon" href="mailto:tombrooksengineering@gmail.com">tombrooksengineering@gmail.com</a>
+          <i class="fa fa-envelope" aria-hidden="true"></i><a id="email" class="contactIcon" :href="'mailto:' + mailAddress">{{ mailAddress }}</a>
           <input
             type="image"
             class="clickable"
-            src="img/copyIcon.png"
+            src="../assets/copyIcon.png"
             title="Click to Copy Email"
-            onclick="copyFromSpanElementToClipboard('email')"
+            @click="copyMailToClipboard"
             width="24"
             height="24"
           />
@@ -51,7 +50,24 @@
 
   @Component
   export default class Contact extends Vue {
-    //   @Prop() private msg!: string;
+    private mailAddress = "tombrooksengineering@gmail.com";
+
+    private copyMailToClipboard() {
+      const copyText = document.getElementById("email");
+      if (copyText == null) return;
+      let spanText = copyText.textContent;
+      if (spanText == null) return;
+      spanText = spanText.trim();
+
+      const dummyTempTextArea = document.createElement("textarea");
+      dummyTempTextArea.value = spanText;
+      document.body.appendChild(dummyTempTextArea);
+      dummyTempTextArea.select();
+
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+      dummyTempTextArea.remove();
+    }
   }
 </script>
 
