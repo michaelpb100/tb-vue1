@@ -1,66 +1,17 @@
 <template>
-  <div id="app">
-    <!-- <img :src="image" class="image" alt="..." /> -->
-    <!-- <img :src="process.env.BASE_URL + 'favicon.ico'" class="image" alt="..." /> -->
-    <img class="image" v-for="(image, i) in images" :src="image" :key="i" @click="index = i" />
-    <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
-  </div>
-  <!-- <div class="bd-example carousel-resizable">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../assets/HomeBackDoor.jpg" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5></h5>
-            <p></p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/schoolRail.jpg" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5></h5>
-            <p></p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/door.jpg" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5></h5>
-            <p></p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/HomeFrontDoor.jpg" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5></h5>
-            <p></p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="../assets/Shannon_Airport2.png" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h5></h5>
-            <p></p>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div> -->
+<div>
+     <transition-group name="thumbnailfade" tag="div">
+      <img v-for="thumb in filteredImages" :key="thumb.id" 
+           @click="showLightbox(thumb.name)"  :src="thumbnailDir + thumb.name" :alt="thumb.alt" :title="thumb.alt" />
+    </transition-group>
+
+    <lightbox ref="lightbox"
+      :images="images"
+      :directory="thumbnailDir"
+      :filter="galleryFilter"
+      :timeoutDuration="5000"
+    ></lightbox>
+</div>
 </template>
 
 <script lang="ts">
@@ -71,25 +22,82 @@
     components: { VueGallerySlideshow }
   })
   export default class Gates extends Vue {
-    private images: Array<string>;
-    private index = 0;
-    // private image;
-    // private image = "https://picsum.photos/id/1005/600/200";
+    private images : Array<any>;
+    private thumbnailDir: string;
+    private galleryFilter = "all";
+
+
+    showLightbox(imageName) {
+      const lightbox : any = this.$refs.lightbox;
+      lightbox.show(imageName);
+    }
+
+    updateFilter(filterName) {
+      this.galleryFilter = filterName;
+    }
+
+    get filteredImages() {
+      if (this.galleryFilter === 'all') {
+        return this.images;
+      } else {
+        return this.images.filter(image => image.filter === this.galleryFilter);
+      }
+    }
+    
 
     beforeCreate() {
-      const basePath = process.env.BASE_URL;
-      this.images = [
-         basePath  +"images/HomeBackDoor.jpg",
-         basePath  +"images/schoolRail.jpg",
-         basePath  +"images/door.jpg",
-         basePath  +"images/HomeFrontDoor.jpg",
-         basePath  +"images/Shannon_Airport2.png"
-      ];
-      console.log(this.images[0]);
-      this.index = 0;
+      // const basePath = process.env.BASE_URL + "images/";
+      // console.log("basePath")
+      // console.log(basePath)
+      // this.images = [
+      //    basePath  +"images/HomeBackDoor.jpg",
+      //    basePath  +"images/schoolRail.jpg",
+      //    basePath  +"images/door.jpg",
+      //    basePath  +"images/HomeFrontDoor.jpg",
+      //    basePath  +"images/Shannon_Airport2.png"
+      // ];
+      this.thumbnailDir = process.env.BASE_URL + "images/";
+      this.images = [{'name':'HomeBackDoor.jpg', 'alt':'The Dolomites', 'filter':'nature', 'id':'image1' },
+               {'name':'schoolRail.jpg', 'alt':'It is a bird on a tree!', 'filter':'animals', 'id':'image2' }, 
+               {'name':'door.jpg', 'alt':'I will live here someday', 'filter':'nature', 'id':'image3' },
+               {'name':'HomeFrontDoor.jpg', 'alt':'Friendly bear', 'filter':'animals', 'id':'image4' },
+               {'name':'Shannon_Airport2.png', 'alt':'A worthy hike', 'filter':'nature', 'id':'image5' } ];
     }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+#filters {
+  width: 500px;
+  margin: 30px auto;
+}
+
+#filters span {
+  margin: 15px;
+}
+
+img {
+  width: 270px;
+  height: 180px;
+  margin: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.thumbnailfade-leave-active,
+.thumbnailfade-enter-active {
+  transition: all 0.4s ease;
+}
+
+.thumbnailfade-enter-active {
+  transition-delay: 0.4s;
+}
+
+.thumbnailfade-enter,
+.thumbnailfade-leave-to {
+  opacity: 0;
+}
+
+</style>
