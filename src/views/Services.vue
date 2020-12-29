@@ -2,7 +2,7 @@
   <!-- <div class="hr">&nbsp;</div> -->
   <div class="indentedContent">
     <h1 class="h1">
-      List of our services:
+      Services:
     </h1>
     <ul class="mainList">
       <li class="serviceItem">Hand Railings / Safety railings</li>
@@ -28,5 +28,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  // @import '../styles/demo.css';
+  @import '../styles/demo.css';
 </style>
