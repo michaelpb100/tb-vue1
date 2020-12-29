@@ -84,7 +84,7 @@
     width: 300px;
     height: calc(100vh - 120px);
     background: #ffffff;
-    // z-index: -1;
+    z-index: 10;
     ul {
       display: flex;
       height: 100%;
