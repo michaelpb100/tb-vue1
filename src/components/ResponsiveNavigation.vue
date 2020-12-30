@@ -39,10 +39,10 @@
         nav.contains("active") ? nav.remove("active") : nav.add("active");
       },
 
-      closeMenu(){
+      closeMenu() {
         const nav = this.$refs.nav.classList;
-        if(nav.contains("active")){
-          nav.remove("active")
+        if (nav.contains("active")) {
+          nav.remove("active");
         }
       }
     },
@@ -81,14 +81,12 @@
 </script>
 
 <style scoped lang="scss">
-
-  .seperatorParagraph{
-    color:#777;
+  .seperatorParagraph {
+    color: #777;
     text-transform: uppercase;
     font: italic small-caps bold 12px/30px Georgia, serif;
     margin-left: 20px;
     margin-top: 10px;
-
   }
 
   nav {

@@ -5,12 +5,8 @@
       <i class="fa fa-envelope" aria-hidden="true"></i
       ><a class="contactIcon" href="mailto:tombrooksengineering@gmail.com">tombrooksengineering@gmail.com</a>
     </div>
-    <button
-      onclick="window.location.href = 'https://maps.app.goo.gl/
-    YeKn7usWHGaX4GuF6';"
-      class="mapButton"
-    >
-      <img class="mapImage" height="20px" width="20px" src="../../public/images/map2.png" />
+    <button @click="navigateMaps" class="mapButton">
+      <img class="mapImage" height="20px" @click="navigateMaps" width="20px" src="../../public/images/map2.png" />
     </button>
   </div>
 </template>
@@ -20,11 +16,12 @@
 
   @Component
   export default class Header extends Vue {
-    //   @Prop() private msg!: string;
+    navigateMaps() {
+      window.location.href = "https://maps.app.goo.gl/YeKn7usWHGaX4GuF6";
+    }
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
   .mapButton {
     height: 20px;
@@ -37,12 +34,7 @@
     /* border: none; */
   }
   .mapImage:hover {
-    /* border: 2px black solid; */
     opacity: 0.5;
-    /* margin: 0px;
-	padding: 0px; */
-    /* background-color: transparent; */
-    /* border: none; */
   }
   .contactIcon {
     margin-left: 5px;
@@ -52,8 +44,6 @@
   }
 
   .contactBar {
-    /* background-color: #2C2C2C; */
-    /* background-color: #3b3d4a; */
     background-color: #3b3d4a;
     width: 100%;
     height: 35px;
@@ -62,8 +52,6 @@
     color: blanchedalmond;
     padding-top: 5px;
     padding-bottom: 5px;
-
-    /* display: inline; */
   }
 
   .phone,

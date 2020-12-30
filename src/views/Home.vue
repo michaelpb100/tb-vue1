@@ -5,7 +5,7 @@
     </div>
     <div class="indentedContent">
       <h1 class="h1">What we do</h1>
-      <p >
+      <p>
         We are a leading Specialist Engineering Metal Fabrication company located outside Ennis in Co. Clare.
         <a class="googleMapsAnchor" href="https://maps.app.goo.gl/YeKn7usWHGaX4GuF6"> Click to View on Google Maps</a><br />
         We specialise in safety hand railings, decorative gates and truck/van/ car body repairs. We also provide a general wedding service.<br />
@@ -17,11 +17,11 @@
     </div>
     <div class="indentedContent">
       <h1 class="h1">How can we help you?</h1>
-      <p >
+      <p>
         We work closely with new and existing customers to deliver workable solutions to produce great results. Contact us today for a free quotation.
       </p>
       <div class="divider"></div>
-      <p ></p>
+      <p></p>
     </div>
   </div>
 </template>
