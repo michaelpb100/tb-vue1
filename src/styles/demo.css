@@ -56,21 +56,6 @@
 }
 
 
-/* Helper classes */
-
-.cf:before,
-.cf:after {
-	content: ' ';
-	display: table;
-}
-
-.cf:after {
-	clear: both;
-}
-
-
-/* Main styles */
-
 body {
 	/* font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif; */
 	font-family: 'Merriweather', Arial, sans-serif;
@@ -161,45 +146,7 @@ a:hover {
 	margin: 0 0 0 300px;
 }
 
-
-.info {
-	font-size: 1.1em;
-	font-weight: bold;
-	padding: 20vh 1em 0;
-	text-align: center;
-	color: #47484c;
-}
-
-body #cdawrap {
-	top: auto;
-	bottom: 15px;
-	background: rgba(0, 0, 0, 0.1);
-}
-
-body #cdawrap .carbon-text {
-	color: #505158;
-}
-
-body #cdawrap a.carbon-poweredby {
-	color: #7883c4;
-}
-
-body #cdawrap a:hover.carbon-poweredby {
-	color: #fff;
-}
-
 @media screen and (max-width: 40em) {
-	.bp-header {
-		padding-top: 3em;
-	}
-	.bp-header__main,
-	.bp-nav {
-		width: 100%;
-		text-align: center;
-	}
-	.dummy-logo {
-		display: none;
-	}
 	.content {
 		margin: 0;
 	}
@@ -210,9 +157,5 @@ body #cdawrap a:hover.carbon-poweredby {
 	}
 	.mainList{
 		margin-left: 30px;
-	}
-	.carousel-resizable{
-		margin-left: 10px;
-		margin-right: 10px;
 	}
 }
