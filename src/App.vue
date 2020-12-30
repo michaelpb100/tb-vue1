@@ -65,18 +65,6 @@
     speak: none;
   }
 
-  .icon--arrow-left:before {
-    content: "\e901";
-  }
-
-  .icon--menu:before {
-    content: "\e903";
-  }
-
-  .icon--cross:before {
-    content: "\e117";
-  }
-
   /* Open and close buttons */
 
   .action {
