@@ -53,7 +53,18 @@
                {'name':'Trailer_3.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'140px' },
                {'name':'Trailer_4.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'200px' },
                {'name':'Trailer_5.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'240px' },
-               {'name':'Trailer_6.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'240px' } ];
+               {'name':'Trailer_6.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'240px' },
+               {'name':'Co_1.jpg', 'alt':'Tipper Trailer Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'140px' },
+               {'name':'Co_4.jpg', 'alt':'Tipper Trailer Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'240px' },
+               {'name':'Co_5.jpg', 'alt':'Tipper Trailer Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'140px' },
+               {'name':'Co_6.jpg', 'alt':'Tipper Trailer Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'240px' },
+               {'name':'Co_7.jpg', 'alt':'Tipper Trailer Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
+               {'name':'Co_2.jpg', 'alt':'Tipper Trailer Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
+               {'name':'Co_3.jpg', 'alt':'Tipper Trailer Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' }, 
+               {'name':'MM_1.jpg', 'alt':'Low Loader Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
+               {'name':'MM_2.jpg', 'alt':'Low Loader Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
+               {'name':'MM_3.jpg', 'alt':'Low Loader Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
+               {'name':'MM_4.jpg', 'alt':'Low Loader Overhaul', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' }, ];
     }
   }
 </script>
