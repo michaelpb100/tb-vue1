@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="hr">&nbsp;</div> -->
   <div class="indentedContent">
     <h1 class="h1">
       Services:
