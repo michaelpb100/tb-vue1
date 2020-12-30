@@ -1,129 +1,62 @@
 <template>
-  <div id="app">
-    <h1>vue-my-photos Demo</h1>
-    <div id="filters">
-      <form>
-        <fieldset>
-          <legend>Filter</legend>
-          <span>
-            <input type="radio" id="all" name="filters" checked v-on:click="updateFilter('all')" />
-            <label for="all">All</label>
-          </span>
-          <span>
-            <input type="radio" id="animals" name="filters" v-on:click="updateFilter('animals')" />
-            <label for="animals">Animals</label>
-          </span>
-          <span>
-            <input type="radio" id="natue" name="filters" v-on:click="updateFilter('nature')" />
-            <label for="nature">Nature</label>
-          </span>
-        </fieldset>
-      </form>
-    </div>
-
-    <!-- xxx -->
-    <!-- <img   :src="xxx" title="dsdsd" /> -->
-    <transition-group name="thumbnailfade" tag="div">
-      <img
-        v-for="thumb in filteredImages"
-        :key="thumb.id"
-        @click="showLightbox(thumb.name)"
-        :src="thumbnailDir + thumb.name"
-        :alt="thumb.alt"
-        :title="thumb.alt"
-      />
+<div>
+     <transition-group name="thumbnailfade" tag="div">
+      <img class="img" v-for="thumb in filteredImages" :key="thumb.id" :height="thumb.height" :width="thumb.width"
+           @click="showLightbox(thumb.name)"  :src="thumbnailDir + thumb.name" :alt="thumb.alt" :title="thumb.alt" />
     </transition-group>
 
-    <lightbox ref="lightbox" :images="images" :filter="galleryFilter" :timeoutDuration="5000"></lightbox>
-  </div>
+    <lightbox ref="lightbox"
+      :images="images"
+      :directory="thumbnailDir"
+      :filter="galleryFilter"
+      :timeoutDuration="5000"
+    ></lightbox>
+</div>
 </template>
 
-<script>
-  const imageList = [
-    { name: "Trailer_1.jpg", alt: "The Dolomites", filter: "nature", id: "image1" },
-    { name: "bird.jpg", alt: "It is a bird on a tree!", filter: "animals", id: "image2" },
-    { name: "alps.jpg", alt: "I will live here someday", filter: "nature", id: "image3" },
-    { name: "bear.jpg", alt: "Friendly bear", filter: "animals", id: "image4" },
-    { name: "canyon.jpg", alt: "A worthy hike", filter: "nature", id: "image5" },
-    { name: "monumentvalley.jpg", alt: "Monument Valley", filter: "nature", id: "image6" },
-    { name: "puppy.jpg", alt: "Puppy with a feather", filter: "animals", id: "image7" },
-    { name: "redwoods.jpg", alt: "Foggy evening in the Redwoods", filter: "nature", id: "image8" }
-  ];
+<script lang="ts">
+  import { Component, Vue } from "vue-property-decorator";
+  import VueGallerySlideshow from "vue-gallery-slideshow";
 
-  export default {
-    name: "app",
-    data() {
-      return {
-        thumbnailDir: process.env.BASE_URL + "images/",
-        images: imageList,
-        galleryFilter: "all"
-      };
-    },
-    methods: {
-      showLightbox(imageName) {
-        this.$refs.lightbox.show(imageName);
-      },
-      updateFilter(filterName) {
-        this.galleryFilter = filterName;
-      }
-    },
-    computed: {
-      filteredImages: function() {
-        if (this.galleryFilter === "all") {
-          return this.images;
-        } else {
-          return this.images.filter(image => image.filter === this.galleryFilter);
-        }
+  @Component({
+    components: { VueGallerySlideshow }
+  })
+  export default class Traliers extends Vue {
+    private images : Array<any>;
+    private thumbnailDir: string;
+    private galleryFilter = "all";
+
+
+    showLightbox(imageName) {
+      const lightbox : any = this.$refs.lightbox;
+      lightbox.show(imageName);
+    }
+
+    updateFilter(filterName) {
+      this.galleryFilter = filterName;
+    }
+
+    get filteredImages() {
+      if (this.galleryFilter === 'all') {
+        return this.images;
+      } else {
+        return this.images.filter(image => image.filter === this.galleryFilter);
       }
     }
-  };
+
+
+    beforeCreate() {
+      this.thumbnailDir = process.env.BASE_URL + "images/";
+      this.images = [{'name':'HomeBackDoor.jpg', 'alt':'Wheelchair Ramp', 'filter':'nature', 'id':'image1', 'height':'180px', 'width':'270px' },
+               {'name':'schoolRail.jpg', 'alt':'Wheelchair Ramp for school', 'filter':'animals', 'id':'image2', 'height':'180px', 'width':'270px' }, 
+               {'name':'door.jpg', 'alt':'Fire door', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
+               {'name':'Shannon_Airport2.png', 'alt':'Shannon Airport Safetly Rail', 'filter':'nature', 'id':'image5', 'height':'180px', 'width':'270px' } ];
+    }
+  }
 </script>
 
-<style>
-  #app {
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #ece1ca;
-    margin-top: 60px;
-  }
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+  @import "../styles/imageViewer.css";
 
-  body {
-    border-color: #69655d;
-    color: #ece1ca;
-    background-color: #676769;
-  }
-
-  #filters {
-    width: 500px;
-    margin: 30px auto;
-  }
-
-  #filters span {
-    margin: 15px;
-  }
-
-  img {
-    width: 270px;
-    height: 180px;
-    margin: 20px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 0.4s ease;
-  }
-
-  .thumbnailfade-leave-active,
-  .thumbnailfade-enter-active {
-    transition: all 0.4s ease;
-  }
-
-  .thumbnailfade-enter-active {
-    transition-delay: 0.4s;
-  }
-
-  .thumbnailfade-enter,
-  .thumbnailfade-leave-to {
-    opacity: 0;
-  }
 </style>
