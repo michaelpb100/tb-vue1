@@ -1,7 +1,7 @@
 <template>
 <div>
      <transition-group name="thumbnailfade" tag="div">
-      <img v-for="thumb in filteredImages" :key="thumb.id" 
+      <img v-for="thumb in filteredImages" :key="thumb.id" :height="thumb.height" :width="thumb.width"
            @click="showLightbox(thumb.name)"  :src="thumbnailDir + thumb.name" :alt="thumb.alt" :title="thumb.alt" />
     </transition-group>
 
@@ -47,11 +47,11 @@
 
     beforeCreate() {
       this.thumbnailDir = process.env.BASE_URL + "images/";
-      this.images = [{'name':'HomeBackDoor.jpg', 'alt':'The Dolomites', 'filter':'nature', 'id':'image1' },
-               {'name':'schoolRail.jpg', 'alt':'It is a bird on a tree!', 'filter':'animals', 'id':'image2' }, 
-               {'name':'door.jpg', 'alt':'I will live here someday', 'filter':'nature', 'id':'image3' },
-               {'name':'HomeFrontDoor.jpg', 'alt':'Friendly bear', 'filter':'animals', 'id':'image4' },
-               {'name':'Shannon_Airport2.png', 'alt':'A worthy hike', 'filter':'nature', 'id':'image5' } ];
+      this.images = [{'name':'HomeBackDoor.jpg', 'alt':'The Dolomites', 'filter':'nature', 'id':'image1', 'height':'180px', 'width':'270px' },
+               {'name':'schoolRail.jpg', 'alt':'It is a bird on a tree!', 'filter':'animals', 'id':'image2', 'height':'180px', 'width':'270px' }, 
+               {'name':'door.jpg', 'alt':'I will live here someday', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
+               {'name':'HomeFrontDoor.jpg', 'alt':'Friendly bear', 'filter':'animals', 'id':'image4', 'height':'180px', 'width':'150px' },
+               {'name':'Shannon_Airport2.png', 'alt':'A worthy hike', 'filter':'nature', 'id':'image5', 'height':'180px', 'width':'270px' } ];
     }
   }
 </script>
@@ -68,8 +68,8 @@
 }
 
 img {
-  width: 270px;
-  height: 180px;
+  // width: 270px;
+  // height: 180px;
   margin: 20px;
   border-radius: 3px;
   cursor: pointer;
