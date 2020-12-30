@@ -1,0 +1,29 @@
+#filters {
+    width: 500px;
+    margin: 30px auto;
+  }
+   
+  #filters span {
+    margin: 15px;
+  }
+  
+  .img {
+    margin: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .thumbnailfade-leave-active,
+  .thumbnailfade-enter-active {
+    transition: all 0.4s ease;
+  }
+  
+  .thumbnailfade-enter-active {
+    transition-delay: 0.4s;
+  }
+  
+  .thumbnailfade-enter,
+  .thumbnailfade-leave-to {
+    opacity: 0;
+  }
