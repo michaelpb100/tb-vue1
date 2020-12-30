@@ -49,9 +49,9 @@
       this.thumbnailDir = process.env.BASE_URL + "images/";
       this.images = [{'name':'HomeBackDoor.jpg', 'alt':'Wheelchair Ramp', 'filter':'nature', 'id':'image1', 'height':'180px', 'width':'270px' },
                {'name':'schoolRail.jpg', 'alt':'Wheelchair Ramp for school', 'filter':'animals', 'id':'image2', 'height':'180px', 'width':'270px' }, 
-               {'name':'door.jpg', 'alt':'Fire door', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
-               {'name':'HomeFrontDoor.jpg', 'alt':'Wheelchair Ramp', 'filter':'animals', 'id':'image4', 'height':'180px', 'width':'150px' },
-               {'name':'Shannon_Airport2.png', 'alt':'Shannon Airport Safetly Rail', 'filter':'nature', 'id':'image5', 'height':'180px', 'width':'270px' } ];
+               {'name':'door.jpg', 'alt':'Fire door', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'140px' },
+               {'name':'HomeFrontDoor.jpg', 'alt':'Wheelchair Ramp', 'filter':'animals', 'id':'image4', 'height':'180px', 'width':'140px' },
+               {'name':'Shannon_Airport2.png', 'alt':'Shannon Airport Safetly Rail', 'filter':'nature', 'id':'image5', 'height':'180px', 'width':'240px' } ];
     }
   }
 </script>
