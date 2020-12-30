@@ -43,24 +43,24 @@
         {
           text: "What we do",
           path: "/",
-          icon: "ion-ios-megaphone"
+          icon: "ion-ios-home"
         },
         {
           text: "Services",
           path: "/services",
-          icon: "ion-ios-business"
+          icon: "ion-ios-albums"
         },
         {
           text: "Contact",
           path: "/contact",
-          icon: "ion-ios-bonfire"
+          icon: "ion-ios-call"
         }
       ],
       workLinks: [
         {
-          text: "Trailers",
+          text: "Trailer Repair",
           path: "/trailers",
-          icon: "ion-ios-megaphone"
+          icon: "ion-ios-bus"
         },
         {
           text: "Railings and Gates",

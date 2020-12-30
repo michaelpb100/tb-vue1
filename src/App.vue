@@ -1,14 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <!-- <button class="fa fa-bars action action--open" aria-label="Open Menu"></button> -->
     <ResponsiveNavigation background="#fff" link-color="#777" hoverBackground="#ddd" />
-    <!-- <Menu v-bind:mobileMode="true"/> -->
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/services">Services</router-link>
-    </div> -->
     <div class="outlet">
       <div class="header-image">
         <img alt="Tom Brooks Engineering" height="120" width="240" src="../public/images/tom-brooks-logo-wide.jpg" />
@@ -27,31 +20,7 @@
     components: {
       Header,
       ResponsiveNavigation
-    },
-    data: () => ({
-      navLinks: [
-        {
-          text: "Contact",
-          path: "/contact",
-          icon: "ion-ios-megaphone"
-        },
-        {
-          text: "About",
-          path: "/about",
-          icon: "ion-ios-business"
-        },
-        {
-          text: "Blog",
-          path: "/blog",
-          icon: "ion-ios-bonfire"
-        },
-        {
-          text: "Portfolio",
-          path: "/portfolio",
-          icon: "ion-ios-briefcase"
-        }
-      ]
-    })
+    }
   })
   export default class App extends Vue {}
 </script>
