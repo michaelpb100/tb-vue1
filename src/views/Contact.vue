@@ -1,6 +1,6 @@
 <template>
   <div class="indentedContent">
-    <div class="paragraph_Main">
+    <div>
       <h1 class="h1">Contact Information</h1>
 
       <p><strong>Our Opening Hours:</strong></p>

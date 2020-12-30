@@ -11,7 +11,7 @@
       <li class="serviceItem">Car, Van and jeep and body and chassis repair</li>
       <li class="serviceItem">Car Trailer, Livestock trailer, horsebox and plant trailer repair and service</li>
     </ul>
-    <p class="paragraph_Main">
+    <p>
       Please feel free to contact us by phone or email to discuss your ideas, plans and requirements or just an informal chat about what we can
       deliver.
     </p>
