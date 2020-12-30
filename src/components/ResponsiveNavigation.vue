@@ -40,7 +40,6 @@
       },
 
       closeMenu(){
-        console.log("HHHHHHHHHHHHHHHHHHHHHHHHHH");
         const nav = this.$refs.nav.classList;
         if(nav.contains("active")){
           nav.remove("active")
