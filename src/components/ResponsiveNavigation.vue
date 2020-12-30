@@ -13,7 +13,8 @@
           <i :class="link.icon" />
         </router-link>
       </li>
-      <p>Previous Work</p>
+      <!-- <p :style="{ color: linkColor || '#DDD' }">Example of Our Work</p> -->
+      <p class="seperatorParagraph">Previous Work</p>
       <li
         v-for="(link, index) in workLinks"
         :key="index + 100"
@@ -31,7 +32,7 @@
 
 <script>
   export default {
-    props: ["background", "linkColor", "hoverBackground", "imagePath"],
+    props: ["background", "linkColor", "hoverBackground"],
     methods: {
       toggleNav() {
         const nav = this.$refs.nav.classList;
@@ -73,11 +74,18 @@
 </script>
 
 <style scoped lang="scss">
+
+  .seperatorParagraph{
+    color:#777;
+    text-transform: uppercase;
+    font: italic small-caps bold 12px/30px Georgia, serif;
+    margin-left: 20px;
+    margin-top: 10px;
+
+  }
+
   nav {
     position: fixed;
-    // top: 35px;
-    // margin-top: 35px;
-    // top: 10px;
     border: none;
     box-shadow: none;
     left: 0;
