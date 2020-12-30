@@ -47,10 +47,13 @@
 
     beforeCreate() {
       this.thumbnailDir = process.env.BASE_URL + "images/";
-      this.images = [{'name':'HomeBackDoor.jpg', 'alt':'Wheelchair Ramp', 'filter':'nature', 'id':'image1', 'height':'180px', 'width':'270px' },
-               {'name':'schoolRail.jpg', 'alt':'Wheelchair Ramp for school', 'filter':'animals', 'id':'image2', 'height':'180px', 'width':'270px' }, 
-               {'name':'door.jpg', 'alt':'Fire door', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
-               {'name':'Shannon_Airport2.png', 'alt':'Shannon Airport Safetly Rail', 'filter':'nature', 'id':'image5', 'height':'180px', 'width':'270px' } ];
+      this.images = [{'name':'RedTrailer.jpg', 'alt':'Cattle Truck', 'filter':'nature', 'id':'image1', 'height':'180px', 'width':'270px' },
+               {'name':'Trailer_1.jpg', 'alt':'Car Transporter', 'filter':'animals', 'id':'image2', 'height':'180px', 'width':'240px' }, 
+               {'name':'Trailer_2.jpg', 'alt':'Car Transporter', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'170px' },
+               {'name':'Trailer_3.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'140px' },
+               {'name':'Trailer_4.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'200px' },
+               {'name':'Trailer_5.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'240px' },
+               {'name':'Trailer_6.jpg', 'alt':'Tipper Trailer', 'filter':'nature', 'id':'image3', 'height':'180px', 'width':'240px' } ];
     }
   }
 </script>
